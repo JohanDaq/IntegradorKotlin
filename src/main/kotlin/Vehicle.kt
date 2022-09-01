@@ -1,10 +1,12 @@
 import java.util.Calendar
 
-
+/**
+ * The Vehicle class represents a car, bus, motorcycle and mini bus which are stored at parking place.
+ */
 data class Vehicle(
     val plate: String,
     val type: VehicleType,
-    val checkInTime: Long,
+    val checkInTime: Calendar,
     val discountCard: String? = null
 ){
     override fun equals(other: Any?): Boolean{
