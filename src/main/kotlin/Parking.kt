@@ -87,4 +87,13 @@ data class Parking(
       */
 
     fun listVehicles(): Unit = vehicles.forEach(){ println(it.plate) }
+
+    /**
+     * Iterates over a vehicles [MutableList] list and add each one at parking
+     * @param vehiclesList [MutableList] list of vehicles
+     * @author Johan Aponte, Kevin Von Hausen, Yilber Sánchez, Débora Tolaba
+     */
+    fun addAllVehicles(vehiclesList: MutableList<Vehicle>){
+        vehiclesList.forEach {this.addVehicle(it)}
+    }
 }
