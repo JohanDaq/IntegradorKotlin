@@ -14,7 +14,7 @@ fun main() {
 //    val minibus1 = Vehicle("AAH", VehicleType.MINI_BUS, Calendar.getInstance())
 //    val bus1 = Vehicle("AAI", VehicleType.BUS, Calendar.getInstance(), "CARD_004")
     val car2 = Vehicle("AAJ", VehicleType.AUTO, Calendar.getInstance().timeInMillis - 300L * MINUTES_IN_MILLISECONDS, "CARD_005")
-//    val moto2 = Vehicle("AAK", VehicleType.MOTO, Calendar.getInstance())
+    val moto2 = Vehicle("AAK", VehicleType.MOTO, Calendar.getInstance().timeInMillis - 300L * MINUTES_IN_MILLISECONDS)
 //    val minibus2 = Vehicle("AAL", VehicleType.MINI_BUS, Calendar.getInstance())
 //    val bus2 = Vehicle("AAM", VehicleType.BUS, Calendar.getInstance(), "CARD_006")
 //    val car3 = Vehicle("AAN", VehicleType.AUTO, Calendar.getInstance(), "CARD_007")
