@@ -5,7 +5,7 @@ data class Parking(
     val vehicles: MutableSet<Vehicle>,
 ) {
     private val spaces = 20
-    var profit: Pair<Int,Int> = Pair(0,0)
+    private var profit: Pair<Int,Int> = Pair(0,0)
 
     /**
      * Add a vehicle [Vehicle] if it is not registered yet otherwise the register process would be rejected
@@ -68,7 +68,7 @@ data class Parking(
      * When a vehicle leaves update the profits
      * @author Johan Aponte, Kevin Von Hausen, Yilber Sánchez, Débora Tolaba
      */
-    private fun updateProfits(fee: Int): Unit{
+    private fun updateProfits(fee: Int){
         profit = profit.copy(first = profit.first + 1)
         profit = profit.copy(second = profit.second + fee)
     }
@@ -85,15 +85,14 @@ data class Parking(
      * Show the complete list of vehicle plate inside parking
      * @author Johan Aponte, Kevin Von Hausen, Yilber Sánchez, Débora Tolaba
       */
-
-    fun listVehicles(): Unit = vehicles.forEach(){ println(it.plate) }
+    fun listVehicles(): Unit = vehicles.forEach { println(it.plate) }
 
     /**
      * Iterates over a vehicles [MutableList] list and add each one at parking
      * @param vehiclesList [MutableList] list of vehicles
      * @author Johan Aponte, Kevin Von Hausen, Yilber Sánchez, Débora Tolaba
      */
-    fun addAllVehicles(vehiclesList: MutableList<Vehicle>){
+    fun addListVehicles(vehiclesList: MutableList<Vehicle>){
         vehiclesList.forEach {this.addVehicle(it)}
     }
 }
